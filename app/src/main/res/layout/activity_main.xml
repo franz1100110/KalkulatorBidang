@@ -36,7 +36,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Panjang Sisi"
+                android:text="Panjang Sisi/Alas Segitiga/Diameter"
                 tools:layout_editor_absoluteX="37dp"
                 tools:layout_editor_absoluteY="193dp" />
 
@@ -53,26 +53,9 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alas"
+                android:text="Lebar Persegi/Tinggi Segitiga"
                 tools:layout_editor_absoluteX="37dp"
                 tools:layout_editor_absoluteY="252dp" />
-
-            <EditText
-                android:id="@+id/alasfield"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                tools:layout_editor_absoluteX="167dp"
-                tools:layout_editor_absoluteY="252dp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tinggi"
-                tools:layout_editor_absoluteX="37dp"
-                tools:layout_editor_absoluteY="315dp" />
 
             <EditText
                 android:id="@+id/tinggifield"
@@ -81,24 +64,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 tools:layout_editor_absoluteX="167dp"
-                tools:layout_editor_absoluteY="315dp" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Radius"
-                tools:layout_editor_absoluteX="37dp"
-                tools:layout_editor_absoluteY="377dp" />
-
-            <EditText
-                android:id="@+id/radiusfield"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                tools:layout_editor_absoluteX="167dp"
-                tools:layout_editor_absoluteY="377dp" />
+                tools:layout_editor_absoluteY="252dp" />
 
             <Button
                 android:id="@+id/perseg"

@@ -13,8 +13,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    EditText sisifield, alasfield, tinggifield, radiusfield;
-    String sisii, alass, tinggii, radiuss;
+    EditText sisifield, sisi2field, alasfield, tinggifield, radiusfield;
+    String sisii, sisii2, alass, tinggii, radiuss;
     TextView keliling,luas;
     Double sisi=0.0;
     Double alas=0.0;
@@ -28,18 +28,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sisifield=(EditText) findViewById(R.id.sisifield);
-        alasfield=(EditText) findViewById(R.id.alasfield);
+        sisi2field=(EditText) findViewById(R.id.tinggifield);
+        alasfield=(EditText) findViewById(R.id.sisifield);
         tinggifield=(EditText) findViewById(R.id.tinggifield);
-        radiusfield=(EditText) findViewById(R.id.radiusfield);
+        radiusfield=(EditText) findViewById(R.id.sisifield);
         keliling=(TextView) findViewById(R.id.keliling);
         luas=(TextView) findViewById(R.id.luas);
     }
     public void persegi(View ph) {
         sisii = sisifield.getText().toString();
-        if (TextUtils.isEmpty(sisii))
+        sisii2 = sisi2field.getText().toString();
+        if (TextUtils.isEmpty(sisii)||TextUtils.isEmpty(sisii2))
         {
-            keliling.setText("Keliling persegi tidak bisa dihitung karena sisi persegi belum diisi");
-            luas.setText("Luas persegi tidak bisa dihitung karena sisi persegi belum diisi");
+            keliling.setText("Keliling persegi tidak bisa dihitung karena sisi persegi belum dimasukkan");
+            luas.setText("Luas persegi tidak bisa dihitung karena sisi persegi belum dimasukkan");
         }
         else {
                 sisi = Double.parseDouble(sisifield.getText().toString());
@@ -55,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
         tinggii = tinggifield.getText().toString();
         if(TextUtils.isEmpty(sisii)||TextUtils.isEmpty(alass)||TextUtils.isEmpty(tinggii))
         {
-            keliling.setText("Keliling tidak bisa dihitung karena sisi/alas/tinggi belum diisi!");
-            luas.setText("Luas tidak bisa dihitung karena sisi/alas/tinggi belum diisi!");
+            keliling.setText("Keliling tidak bisa dihitung karena sisi/alas/tinggi belum dimasukkan");
+            luas.setText("Luas tidak bisa dihitung karena sisi/alas/tinggi belum dimasukkan");
         }
         else{
             sisi = Double.parseDouble(sisifield.getText().toString());
@@ -72,12 +74,13 @@ public class MainActivity extends AppCompatActivity {
         radiuss = radiusfield.getText().toString();
         if(TextUtils.isEmpty(radiuss))
         {
-            keliling.setText("Keliling tidak bisa dihitung karena radius belum dimasukkan!");
-            luas.setText("Luas tidak bisa dihitung karena radius belum dimasukkan!");
+            keliling.setText("Keliling tidak bisa dihitung karena radius belum dimasukkan");
+            luas.setText("Luas tidak bisa dihitung karena radius belum dimasukkan");
         }
         else
         {
             radius = Double.parseDouble((radiusfield.getText()).toString());
+            radius=radius/2;
             result1 = 3.14*radius*radius;
             result2 = 3.14*2*radius;
             keliling.setText("Kelilingnya adakah :" + result1);
